@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spice Kitchen</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            line-height: 1.5;
+            background-color: #f4f4f4; /* Light background */
+            color: #333;
+        }
+
+        /* Accent Color Definition - Gold/Yellow */
+        .accent {
+            color: #FFC107; 
+        }
+
+        /* Header and Navigation - Deep Green Theme */
+        header {
+            background: #4CAF50; /* Indian Green */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            padding: 0;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block; /* Horizontal links */
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FFC107; /* Gold on hover */
+        }
+
+        /* Section Layout */
+        section {
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFC107; /* Gold border */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Hero - Now just a title block */
+        #hero {
+            background-color: #E0F2F1; /* Very light teal/mint background */
+            padding: 50px 15px;
+        }
+        
+        /* Menu Item Styling */
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .menu-item .title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .menu-item .price {
+            float: right; /* Use float for simple side-by-side */
+            font-weight: bold;
+            color: #4CAF50; /* Green price */
+        }
+
+        /* Form Styling (Reservations) */
+        .form-area {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .form-area label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .form-area input,
+        .form-area select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-area button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #D9534F; /* Deep Red button */
+            color: white;
+            border: none;
+        }
+
+        /* Reviews */
+        .review {
+            border-top: 1px dashed #FFC107; /* Gold dashed line */
+            padding: 10px 0;
+            max-width: 500px;
+            margin: 10px auto;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .review strong {
+            display: block;
+            text-align: right;
+            font-style: normal;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE SPICE KITCHEN</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reserve">Reserve</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Authentic Indian Flavors</h2>
+        <p>Serving the finest curries and tandoori specialties.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Delicious Menu</h2>
+        
+        <div class="menu-item">
+            <span class="price">₹450</span>
+            <span class="title">Butter Chicken (Murgh Makhani)</span>
+            <p style="clear: both; font-size: 0.9em; color: #666;">Tender chicken in a rich tomato and butter gravy.</p>
+        </div>
+
+        <div class="menu-item">
+            <span class="price">₹380</span>
+            <span class="title">Palak Paneer</span>
+            <p style="clear: both; font-size: 0.9em; color: #666;">Cottage cheese and spinach curry, tempered with spices.</p>
+        </div>
+
+        <div class="menu-item">
+            <span class="price">₹80</span>
+            <span class="title">Garlic Naan</span>
+            <p style="clear: both; font-size: 0.9em; color: #666;">Tandoor-baked flatbread brushed with garlic and butter.</p>
+        </div>
+    </section>
+
+    <section id="reserve">
+        <h2>Book a Table</h2>
+        <div class="form-area">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" value="19:00" required>
+                
+                <label for="guests">Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                </select>
+                
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Customer Feedback</h2>
+        
+        <div class="review">
+            <p>"The best Butter Chicken I've ever tasted. Highly authentic and delicious!"</p>
+            <strong>— Priya S.</strong>
+        </div>
+
+        <div class="review">
+            <p>"Simple, fresh, and great value for money. The Palak Paneer was perfect."</p>
+            <strong>— Rohan D.</strong>
+        </div>
+    </section>
+
+    <footer>
+        <p>456 Spice Lane, New Delhi | +91 98765 43210</p>
+        <p>&copy; 2024 The Spice Kitchen</p>
+    </footer>
+
+</body>
+</html>
